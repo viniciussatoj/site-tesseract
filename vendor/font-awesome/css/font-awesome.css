@@ -5,16 +5,16 @@
 /* FONT PATH
  * -------------------------- */
 @font-face {
-  font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype');
+  font-family: 'Jaapokki';
+  src: url('../fonts/jaapokki-regular.eot');
+  src: url('../fonts/jaapokki-regular.eot?#iefix&v=4.6.3') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'FontAwesome';
-  src: url('../fonts/jaapokki-regular.eot');
-  src: url('../fonts/jaapokki-regular.eot?#iefix&v=4.6.3') format('embedded-opentype');
+  font-family: 'DejaVuSans ExtraLight';
+  src:  url('../fonts/DejaVuSans-ExtraLight.ttf'),
+        url('../fonts/DejaVuSans-ExtraLight.ttf?v=4.6.3') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

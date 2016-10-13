@@ -150,8 +150,8 @@ fieldset[disabled] .btn-xl.active {
   border-color: transparent;
 }
 .navbar-custom .navbar-brand {
-  color: #fed136;
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  color: #fff;
+  font-family: "Jaapokki", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
@@ -180,6 +180,10 @@ fieldset[disabled] .btn-xl.active {
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
+  transition: font-size 0.2s;
+}
+.navbar-custom .nav li a {
+
 }
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
@@ -206,10 +210,17 @@ fieldset[disabled] .btn-xl.active {
     border: none;
   }
   .navbar-custom .navbar-brand {
-    font-size: 2em;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+    font-size: 3em;
+    margin-top: -0.5em;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .navbar-custom .navbar-brand > img{
+    display: inline;
+    padding: 0 0.1em 0 0;
+    margin-top: -10px;
+    width: 1.8em;
   }
   .navbar-custom .navbar-nav > .active > a {
     border-radius: 3px;
@@ -218,10 +229,19 @@ fieldset[disabled] .btn-xl.active {
 @media (min-width: 768px) {
   .navbar-custom.affix {
     background-color: #222222;
-    padding: 10px 0;
+    padding: 0px 0;
   }
   .navbar-custom.affix .navbar-brand {
-    font-size: 1.5em;
+    font-size: 2em;
+  }
+  .navbar-custom.affix .navbar-right {
+    font-size: 0.8em;
+    transition: font-size position 0.2s;
+  }
+  .navbar-custom.affix .navbar-brand > img{
+    width: 1.6em;
+    margin: 0;
+    padding-top: 0;
   }
 }
 header {
@@ -244,9 +264,9 @@ header {
     url('../img/header-bg.jpg');
   height: 80vh;
   }
-header .intro-text {
-  padding-top: 100px;
-  padding-bottom: 50px;
+header.pagina-equipe{
+  background-image: url("../img/header-bg-equipe.jpg");
+  height: 60vh;
 }
 header .intro-text .intro-heading {
   font-family: "Jaapokki", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -254,6 +274,9 @@ header .intro-text .intro-heading {
   font-size: 5em;
   line-height: 50px;
   margin-bottom: 25px;
+}
+header.pagina-equipe .intro-text .intro-heading {
+
 }
 @media (min-width: 768px) {
   header .intro-text {
@@ -266,6 +289,19 @@ header .intro-text .intro-heading {
     font-size: 5em;
     line-height: 75px;
     margin-bottom: 50px;
+  }
+  header.pagina-equipe .intro-text {
+    /*padding: 50px 0 25px 0;*/
+    padding: 225px 0 18px 0;
+    padding-bottom: 150px;
+
+  }
+  header.pagina-equipe .intro-text .intro-heading{
+    font-family: "Jaapokki", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 4em;
+    line-height: 75px;
+    margin-bottom: 37px;
   }
 }
 section {
@@ -317,12 +353,24 @@ section h3.itens-trabalho {
   font-weight: 100;
   margin: 0 5em 0 5em;
 }
-section h2.equipe-titulo {
+section h2.equipe-titulo, section h2.titulo-contato {
   font-family: "Jaapokki", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 4em;
   margin-top: 0;
   margin-bottom: 0.6em;
   color : #161616;
+}
+section h2.titulo-contato{
+  color: #FFF;
+}
+section p.equipe-descricao{
+  font-family: "Cabin", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 1.1em;
+  text-align: justify;
+  font-weight: 600;
+  color: #131313;
+  margin: 0 5%;
 }
 @media (min-width: 768px) {
   section {
@@ -333,30 +381,8 @@ section h2.equipe-titulo {
   margin: 15px 0;
   text-transform: none;
 }
-.team-member {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.team-member img {
-  margin: 0 auto;
-  border: 7px solid white;
-}
-.team-member h4 {
-  margin-top: 25px;
-  margin-bottom: 0;
-  text-transform: none;
-}
-.team-member p {
-  margin-top: 0;
-}
-aside.clients img {
-  margin: 50px auto;
-}
 section#contact {
-  background-color: #222222;
-  background-image: url('../img/map-image.png');
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #111;
 }
 section#contact .section-heading {
   color: white;
@@ -379,29 +405,29 @@ section#contact .form-control:focus {
   box-shadow: none;
 }
 section#contact ::-webkit-input-placeholder {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Jaapokki", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
-  color: #eeeeee;
+  font-weight: 400;
+  color: #444;
 }
 section#contact :-moz-placeholder {
   /* Firefox 18- */
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Jaapokki", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   color: #eeeeee;
 }
 section#contact ::-moz-placeholder {
   /* Firefox 19+ */
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Jaapokki", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   color: #eeeeee;
 }
 section#contact :-ms-input-placeholder {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Jaapokki", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   color: #eeeeee;
 }
 section#contact .text-danger {
@@ -593,9 +619,7 @@ body {
   height: 90px;
 }
 
-ul.img-list {
-  height: 50vh;
-
+ul.img-list, ul.lista-membros {
   display: inline-flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -605,8 +629,24 @@ ul.img-list {
   text-align: left;
   vertical-align: top;
 }
+ul.lista-membros{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto 5% auto 5%;
+}
+ul.lista-membros > li.thumbnail-grande > h4, ul.lista-membros > li.thumbnail-grande > h5{
+  font-family: "DejaVuSans ExtraLight", Helvetica, Arial, sans-serif;
+  font-size: 2.6em;
+  font-weight: 100;
+  margin: 0;
+}
+ul.lista-membros > li.thumbnail-grande > h5{
+  font-size: 1.7em;
+}
 
-ul.img-list li.thumbnail-grande, ul.img-list li.thumbnail-pequeno {
+ul.img-list li.thumbnail-grande, ul.img-list li.thumbnail-pequeno, ul.lista-membros li.thumbnail-grande,
+ul.lista-membros li.thumbnail-pequeno {
   display: inline-block;
   height: 194px;
   margin: 0 14px 14px 0;
@@ -614,10 +654,13 @@ ul.img-list li.thumbnail-grande, ul.img-list li.thumbnail-pequeno {
   width: 194px;
 }
 
-ul.img-list li.thumbnail-pequeno {
+ul.img-list li.thumbnail-pequeno, ul.lista-membros li.thumbnail-pequeno{
   height: 90px;
   margin: 0 14px 14px 0;
   width: 90px;
+}
+ul.lista-membros li.thumbnail-grande, ul.lista-membros li.thumbnail-pequeno {
+
 }
 
 span.conteudo-texto-grande, span.conteudo-texto-pequeno {
@@ -641,7 +684,7 @@ span.conteudo-texto-pequeno{
   word-wrap: normal;
 }
 
-ul.img-list li:hover span.conteudo-texto-grande, ul.img-list li:hover span.conteudo-texto-pequeno {
+ul.img-list li:hover span.conteudo-texto-grande, ul.img-list li:hover span.conteudo-texto-pequeno, ul.lista-membros li:hover span.conteudo-texto-grande, ul.lista-membros li:hover span.conteudo-texto-pequeno{
   opacity: 1;
 }
 span.conteudo-texto-grande> span > h4, span.conteudo-texto-pequeno> span > h4{
@@ -664,4 +707,33 @@ span.conteudo-texto-grande span {
   display: table-cell;
   text-align: left;
   vertical-align: top;
+}
+h4.label-form{
+  font-family: "Jaapokki", Helvetica, Arial, sans-serif;
+  font-size: 2.6em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: white;
+}
+section#contact .botao-enviar{
+  background: none;
+  border: 0;
+  margin: -1em 0 0 0;
+  padding: 0;
+  font-size: 2.6em;
+  font-family: "Jaapokki", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  transition: color 0.25s;
+}
+section#contact .botao-enviar:hover{
+  color: #fed136;
+}
+.separador-footer{
+  background: url("../img/barra.gif")  ;
+  height: 43px;
+}
+.logo-footer{
+  margin: 0 auto;
+  padding: 0 auto;
 }
