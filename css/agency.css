@@ -606,7 +606,8 @@ body {
   color: #fff
 }
 .container-equipe{
-  padding: 0 auto;
+  padding: 0 auto 400px auto;
+  display: block;
 }
 
 .equipe-img-grande{
