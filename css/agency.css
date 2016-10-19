@@ -606,8 +606,7 @@ body {
   color: #fff
 }
 .container-equipe{
-  padding: 0 auto 400px auto;
-  display: block;
+  padding: 0 auto;
 }
 
 .equipe-img-grande{
@@ -650,7 +649,7 @@ ul.img-list li.thumbnail-grande, ul.img-list li.thumbnail-pequeno, ul.lista-memb
 ul.lista-membros li.thumbnail-pequeno {
   display: inline-block;
   height: 194px;
-  margin: 0 14px 14px 0;
+  margin: 0 14px 6em 0;
   position: relative;
   width: 194px;
 }
@@ -684,8 +683,33 @@ span.conteudo-texto-pequeno{
   height: 90px;
   word-wrap: normal;
 }
+span.tags-habilidades{
+  background: rgba(0,0,0,0.4);
+  cursor: pointer;
+  display: table;
+  left: 0;
+  position: absolute;
+  top: 0;
+  padding: 10px 0  0 10px;
+  width: 194px;
+  height: 194px;
+  opacity: 0;
+  transition:  opacity 500ms;
+}
+span.tags-habilidades > h6{
+  font-family: "Cabin", Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+  color: #1e1e1e;
+  background: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  font-weight: 400;
+  margin: 3px;
+  padding: 5px;
+}
 
-ul.img-list li:hover span.conteudo-texto-grande, ul.img-list li:hover span.conteudo-texto-pequeno, ul.lista-membros li:hover span.conteudo-texto-grande, ul.lista-membros li:hover span.conteudo-texto-pequeno{
+ul.img-list li:hover span.conteudo-texto-grande, ul.img-list li:hover span.conteudo-texto-pequeno,
+ul.lista-membros li:hover span.tags-habilidades, ul.lista-membros li:hover span.tags-habilidades,
+ul.lista-membros li:hover span.conteudo-texto-grande, ul.lista-membros li:hover span.conteudo-texto-pequeno{
   opacity: 1;
 }
 span.conteudo-texto-grande> span > h4, span.conteudo-texto-pequeno> span > h4{
@@ -738,3 +762,104 @@ section#contact .botao-enviar:hover{
   margin: 0 auto;
   padding: 0 auto;
 }
+.separador-itens{
+  height:1px;
+  background:#717171;
+  border-bottom:1px solid #313030;
+}
+.container-profile{
+  margin: -0.5em 5% 0 5%;
+  padding: 2.5em 0 2em 0;
+  background-image: url("../img/separador_membro.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  flex-direction: row;
+}
+.container-profile > .profile-secao1{
+  flex-basis: 0;
+  flex-grow: 0.8;
+}
+.container-profile > .profile-secao1 > img{
+  max-width: 280px;
+  max-height: 280px;
+}
+.container-profile > .profile-secao2{
+  flex-basis: 0;
+  flex-grow: 2;
+  padding: 1em 1em 1em 2em;
+}
+.container-profile > .profile-secao2 > h4, .container-profile > .profile-secao2 > h5,
+.container-profile > .profile-secao3 > .profile-projeto > a >h4{
+  font-family: "DejaVuSans ExtraLight", Helvetica, Arial, sans-serif;
+  font-size: 2.6em;
+  font-weight: 100;
+  margin: -0.3em 0 0.2em 0;
+  padding:0;
+}
+.container-profile > .profile-secao2 > h5{
+  font-size : 1.7em;
+  margin-bottom: 0.2em;
+}
+.container-profile > .profile-secao2 > .descricao-profile{
+  font-family: "Cabin", Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+  line-height: 1.2em;
+}
+.container-profile > .profile-secao3{
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.container-profile > .profile-secao3 > h3{
+  font-family: "DejaVuSans ExtraLight", Helvetica, Arial, sans-serif;
+  font-size: 2.6em;
+  font-weight: 100;
+  margin: 0 0 0.5em 0;
+  padding:0;
+}
+.container-profile > .profile-secao2 > .tags-habilidades-profile > h6{
+  font-family: "DejaVuSans ExtraLight", Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  color: #fff;
+  background: rgba(151, 151, 151, 1);
+  display: inline-block;
+  font-weight: 400;
+  margin: 3px;
+  padding: 5px;
+}
+.container-profile > .profile-secao2 > .tags-habilidades-profile > h6:first-child{
+  margin-left: 0;
+}
+.container-profile > .profile-secao2 > .site-pessoal{
+  font-family: "DejaVuSans ExtraLight", Helvetica, Arial, sans-serif;
+  font-size: 1.6em;
+  display: block;
+  color: #000;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  margin: 0 0 0.2em 0;
+}
+.container-profile > .profile-secao2 > .site-pessoal:hover,.container-profile > .profile-secao2 > .site-pessoal:active{
+  text-decoration: none;
+}
+
+.container-profile > .profile-secao2 > .profile-redes-sociais > a > img{
+  margin: -2px 0 0 -2px;
+  width: 32px;
+  height: 32px;
+}
+.container-profile > .profile-secao3 > .profile-projeto {
+  padding-bottom: 0.5em;
+}
+.container-profile > .profile-secao3 > .profile-projeto > a >img{
+  width: 55px;
+  height: 55px;
+}
+.container-profile > .profile-secao3 > .profile-projeto > a >h4{
+  font-size: 1.8em;
+  color: #000;
+  display: inline;
+  vertical-align: top;
+}
+/*.container-profile > .profile-secao3 > .profile-projeto > a:hover{
+  text-decoration: none;
+}*/
