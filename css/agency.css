@@ -622,7 +622,7 @@ body {
 ul.img-list, ul.lista-membros {
   display: inline-flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -649,9 +649,12 @@ ul.img-list li.thumbnail-grande, ul.img-list li.thumbnail-pequeno, ul.lista-memb
 ul.lista-membros li.thumbnail-pequeno {
   display: inline-block;
   height: 194px;
-  margin: 0 14px 6em 0;
+  margin: 0 14px 14px 0;
   position: relative;
   width: 194px;
+}
+ul.lista-membros li.thumbnail-grande, ul.lista-membros li.thumbnail-pequeno{
+  margin: 0 14px 6em 0;
 }
 
 ul.img-list li.thumbnail-pequeno, ul.lista-membros li.thumbnail-pequeno{
